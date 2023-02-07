@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../dist/tabs.min.css">
+	<title>Tabs demo</title>
+</head>
+
+<body class="body">
+	<div class="tabs" data-tabs="tab1">
+		<ul class="tabs__nav">
+			<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Один</button></li>
+			<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Два</button></li>
+			<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Три</button></li>
+		</ul>
+		<div class="tabs__content">
+			<div class="tabs__panel">Один контент</div>
+			<div class="tabs__panel">Два контент</div>
+			<div class="tabs__panel">Три контент</div>
+		</div>
+	</div>
+	<div class="tabs" data-tabs="tab2">
+		<ul class="tabs__nav">
+			<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Один</button></li>
+			<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Два</button></li>
+			<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Три</button></li>
+		</ul>
+		<div class="tabs__content">
+			<div class="tabs__panel">Один контент</div>
+			<div class="tabs__panel">Два контент</div>
+			<div class="tabs__panel">Три контент</div>
+		</div>
+	</div>
+	<script src="../dist/tabs.min.js"></script>
+	<script>
+		const tabs = new GraphTabs('tab1', {
+			isChanged: (tabs) => {
+				console.log(tabs);
+			},
+			vertical: true,
+		});
+
+		const tabs2 = new GraphTabs('tab2', {
+			isChanged: (tabs) => {
+				console.log(tabs);
+			}
+		});
+	</script>
+</body>
+
+</html>
